@@ -1,0 +1,7 @@
+diff --git a/config.def.h b/config.def.h
+index 877afab..6a1699f 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -84,1 +84,1 @@ static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++static char *font = "mononoki nerd font:pixelsize=12:antialias=true:autohint=true";
