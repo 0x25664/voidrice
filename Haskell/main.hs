@@ -121,13 +121,13 @@ func23 = [x*2 | x <- [1..20], x*2 >= 12] :: [Integer]
 --all numbers from list whoose remainder when devided with 7 is 3 ?
 func24 = [x | x <- [7..50], x `mod` 7 == 3] :: [Integer]
 --crazy sheit
-func25  = [x | x <- [1..20],x /= 20,x /= 1]
-func26 xs = [if x < 10 then "HASKELL!!!" else "CLOJURE!!!" | x <-xs, odd x]
-func27 = [x*y | x <-[2,5,10], y <-[8,10,11]]
-func28 = [x*y | x <-[2,5,10], y <-[8,10,11],x*y > 50]
+func25  = [x | x <- [1..20],x /= 20,x /= 1] :: [Integer]
+func26 xs = [if x < 10 then "HASKELL!!!" else "CLOJURE!!!" | x <-xs, odd x] :: [[Char]]
+func27 = [x*y | x <-[2,5,10], y <-[8,10,11]] :: [Integer]
+func28 = [x*y | x <-[2,5,10], y <-[8,10,11],x*y > 50] :: [Integer]
 --operator even and odd tell if a number is odd
-funcEven = [odd x | x <- [1..10]]
-funcOdd = [even x | x <- [1..10]]
+funcEven = [odd x | x <- [1..10]] :: [Bool]
+funcOdd = [even x | x <- [1..10]] :: [Bool]
 --operator intersperse takes an element and a list and then puths that element in between each pair of elements in the list.
 funcIntersperse = intersperse 0 [1..10]
 -- nouns and adj joke :-)
@@ -136,8 +136,7 @@ adjectives = ["lazy","grouchy","scheming"] :: [[Char]]
 funcnounadj :: [[Char]]
 funcnounadj = [adjective ++ " " ++ noun | noun <- nouns, adjective <- adjectives]
 -- operator concat flattens a list of lists into just a list of elements
-funcConcat :: [Char]
-funcConcat = concat nouns
+funcConcat = concat nouns :: [Char]
 --my own length operator
 funcLength' :: Num a => [t] -> a
 funcLength' xs = sum [1 | _ <- xs]
@@ -162,8 +161,7 @@ funcZip :: [a] -> [b] -> [(a, b)]
 funcZip xs xy = zip xs xy
 --which right triangle that has integers for all sides and all sides equal to or smaller than 10 has a perimeter of 24?
 --operator '^' means n to the power of n
-funcTriangles :: [(Integer,Integer,Integer)]
-funcTriangles = [ (a,b,c) | a <- [1..10], b <- [1..10],c <- [1..10], a^2 + b^2 == c^2, a+b+c == 24 ]
+funcTriangles = [ (a,b,c) | a <- [1..10], b <- [1..10],c <- [1..10], a^2 + b^2 == c^2, a+b+c == 24 ] :: [(Integer,Integer,Integer)]
 
 {- Types and type classes
 we can user ':t' in GHCI to expressions to return their type
@@ -247,9 +245,3 @@ numUniques = length . nub
 
 numSort :: Ord a => [a] -> [a]
 numSort xs = sort xs
-
-{- FIXME DEPRECATED search func
- search :: (Eq a) => [a] -> [a] -> Bool
- search needle haystack =
-   nlen = length needle
-   fold1 (\acc x -> if take neln x == needle then True else acc) False (tails haystack) -}
