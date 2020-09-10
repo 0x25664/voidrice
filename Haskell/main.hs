@@ -161,7 +161,7 @@ funcZip :: [a] -> [b] -> [(a, b)]
 funcZip xs xy = zip xs xy
 --which right triangle that has integers for all sides and all sides equal to or smaller than 10 has a perimeter of 24?
 --operator '^' means n to the power of n
-funcTriangles = [ (a,b,c) | a <- [1..10], b <- [1..10],c <- [1..10], a^2 + b^2 == c^2, a+b+c == 24 ] :: [(Integer,Integer,Integer)]
+funcTriangles = [(a,b,c) | a <- [1..10], b <- [1..10],c <- [1..10], a^2 + b^2 == c^2, a+b+c == 24 ] :: [(Integer,Integer,Integer)]
 
 {- Types and type classes
 we can user ':t' in GHCI to expressions to return their type

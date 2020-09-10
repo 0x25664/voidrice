@@ -4,4 +4,4 @@ index 877afab..6a1699f 100644
 +++ b/config.def.h
 @@ -84,1 +84,1 @@ static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 -static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-+static char *font = "mononoki nerd font:pixelsize=15:antialias=true:autohint=true";
++static char *font = "mononoki-Regular:pixelsize=15:antialias=true:autohint=true";
