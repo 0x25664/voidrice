@@ -5,7 +5,6 @@ import Data.List
  import qualified Data.Map as DM to import and not overlap functions, to call a function we write: DM.filter
  operator '$' means apply the left function to the right -}
 
-
 -- to define sth in ghci type let before definition
 -- '++' operator adds to lists or strings
 hellostr = "Hello" :: [Char]
