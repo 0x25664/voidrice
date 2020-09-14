@@ -9,7 +9,7 @@ press_return = True
 
 def start(event):
     global press_return
-    global bomb 
+    global bomb
     global score
 
     if not press_return:
@@ -24,7 +24,7 @@ def start(event):
 
 def update_display():
     global bomb
-    global score 
+    global score
 
     if bomb > 50:
        bomb_image.config(image = normal_photo)
@@ -53,7 +53,7 @@ def click():
         exit()
 
 def is_alive():
-    global bomb 
+    global bomb
     global press_return
 
     if bomb <= 0:
@@ -76,7 +76,7 @@ score_label = Label(root, text = 'Score: '+ str(score), font = ('Comic sans MS',
 #bomb photos
 no_photo = PhotoImage(file = 'bomb_no.gif')
 normal_photo = PhotoImage(file = 'bomb_normal.gif')
-bang_photo = PhotoImage(file = 'pow.gif') 
+bang_photo = PhotoImage(file = 'pow.gif')
 bomb_image = Label(root, image = normal_photo)
 
 #button
