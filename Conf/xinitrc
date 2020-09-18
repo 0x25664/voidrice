@@ -1,0 +1,4 @@
+#!/bin/sh
+xsetroot -solid '#282828'
+xrdb ~/.config/Xresources
+exec spectrwm
