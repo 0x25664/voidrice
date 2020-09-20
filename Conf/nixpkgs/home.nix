@@ -4,7 +4,19 @@ programs = {
   zsh = {
     enable = true;
     autocd = true;
+    dotDir = ".config/zsh";
+    enableCompletion = true;
     enableAutosuggestions = true;
+    oh-my-zsh = {
+      enable = true;
+      theme = "minimal";
+    };
+    history = {
+      save = 10;
+      size = 10;
+      expireDuplicatesFirst = true;
+    };
+    loginExtra = "if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx -quiet; fi";
     shellAliases = {
       x="vi ~/.config/Xresources";
       xload="xrdb ~/.config/Xresources";
@@ -32,11 +44,7 @@ programs = {
       bashrc="vi ~/.bashrc";
       mixer="alsamixer";
       rename="mv";
-      home="home-manager edit";
-    };
-    oh-my-zsh = {
-      enable = true;
-      theme = "afowler";
+      home="vi .config/nixpkgs/home.nix";
     };
   };
   lf = {
@@ -56,6 +64,7 @@ programs = {
   neovim = {
     enable = true;
     viAlias = true;
+    package = pkgs.neovim-unwrapped;
     plugins = with pkgs.vimPlugins; [ 
       YouCompleteMe
       polyglot 
@@ -73,4 +82,5 @@ programs = {
         set tabstop=2 softtabstop=2 '';
   };
 };
+news.display = "silent";
 }
