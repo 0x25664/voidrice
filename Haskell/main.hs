@@ -18,8 +18,8 @@ func2 = 'z':['a'..'z'] :: [Char]
 func3 = 'A':" small cat" :: [Char]
 
 -- '!!' operator gets something out of a list or string
-func4 = "Andrei Ataman"!! 3 :: Char
-func5 = "Andrei"!! 3 :: Char
+func4 = "Andrei Ataman" !! 3 :: Char
+func5 = "Andrei" !! 3 :: Char
 
 {- you can compare list with these operators: <, <=, >=, ==
  [3,2,1] > [2,1,0]

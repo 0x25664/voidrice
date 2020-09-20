@@ -1,12 +1,12 @@
 !! Colorscheme
 
 ! special
+*.borderpx:			30
 *.termname:     st-256color 
 *.foreground:   #c5c8c6
 *.background:   #c5c8c6
 *.cursorColor:  #c5c8c6
-*.borderpx:		25
-*.font:         mononoki:size=9:weight=bold
+*.font:         mononoki:size=16:weight=bold
 
 ! black
 *.color0:       #1d1f21

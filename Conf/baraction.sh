@@ -35,6 +35,6 @@ date_custom() {
 }
 SLEEP_SEC=1
 while :; do
-      echo " ($(uname -r)) [$(pkgs)] ($(mem) $(cpu)) [$(battery)]"
+    echo " ($(uname -r) $(pkgs)) [$(mem) $(cpu)] ($(battery))"
 	  sleep $SLEEP_SEC
 done
