@@ -1,11 +1,13 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... } : {
 programs = {
+  chromium = {
+    enable = true;
+    package = pkgs.brave;
+  };
   zsh = {
     enable = true;
     autocd = true;
     dotDir = ".config/zsh";
-    enableCompletion = true;
     enableAutosuggestions = true;
     oh-my-zsh = {
       enable = true;
@@ -83,4 +85,5 @@ programs = {
   };
 };
 news.display = "silent";
+xdg.configFile."spectrwm/spectrwm.conf".source = "/home/neo/voidrice/Conf/spectrwm/spectrwm.conf";
 }
