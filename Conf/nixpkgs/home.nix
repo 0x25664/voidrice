@@ -4,86 +4,63 @@ programs = {
     enable = true;
     package = pkgs.brave;
   };
-  zsh = {
+  lf = {
     enable = true;
-    autocd = true;
-    dotDir = ".config/zsh";
-    enableAutosuggestions = true;
-    oh-my-zsh = {
-      enable = true;
-      theme = "minimal";
+    settings = {
+      drawbox = true;
+      color256 = true;
+      dirfirst = true;
     };
-    history = {
-      save = 10;
-      size = 10;
-      expireDuplicatesFirst = true;
-    };
-    loginExtra = "if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx -quiet; fi";
-    shellAliases = {
-      x="vi ~/.config/Xresources";
+  };
+  git = {
+    enable = true;
+    package = pkgs.gitMinimal;
+    userName = "0x25664";
+    userEmail = "andrei.ataman@protonmail.com";
+  };
+  neovim = {
+    enable = true;
+    package = pkgs.neovim-unwrapped;
+    plugins = with pkgs.vimPlugins; [
+			vim-css-color
+			polyglot
+			gruvbox
+			airline ];
+    extraConfig = ''
+        set nu
+				syntax on
+        set nocompatible
+        set smartindent
+        set noswapfile
+        set noshowmode
+        let g:gruvbox_contrast_dark = 'hard'
+        colorscheme gruvbox
+        set shiftwidth=2
+        set tabstop=2 softtabstop=2 
+        let g:airline_extensions = []
+        let g:airline_powerline_fonts = 1
+        let g:airline_highlighting_cache = 1 '';
+  };
+	fish = {
+		enable = true;
+    shellAbbrs = {
+      x="nvim ~/.config/Xresources";
       xload="xrdb ~/.config/Xresources";
-      conf="doas vi /etc/nixos/configuration.nix";
-      barconf="vi ~/.config/baraction.sh";
-      sconf="vi ~/.config/spectrwm/spectrwm.conf";
-      hf="vi ~/voidrice/Haskell/main.hs";
-      hfi="ghci ~/voidrice/Haskell/main.hs";
-      pp="poweroff -p";
-      rp="reboot -p";
+      conf="sudo nvim /etc/nixos/configuration.nix";
       build="time sudo nixos-rebuild switch";
       build-home="time home-manager switch";
       update="sudo nix-channel --update && sudo nix-env -u && build ";
       upgrade="sudo nixos-rebuild switch --upgrade --verbose";
       install="nix-env -f '<nixpkgs>' -iA";
       uninstall="nix-env -e";
-      pysource="source .venv/bin/activate";
-      pyinstall="pip install";
-      pyinit="python -m venv .venv";
-      p3="python3";
-      clean="doas nix-collect-garbage && doas nix-collect-garbage -d && doas nix-store --gc && doas nix-env --delete-generations && doas nix-store --optimise";
-      q="exit";
-      c="clear";
+      clean="sudo nix-collect-garbage -d && sudo nix-store --gc && sudo nix-env --delete-generations && sudo nix-store --optimise";
       search="nix search";
-      bashrc="vi ~/.bashrc";
       mixer="alsamixer";
-      rename="mv";
-      home="vi .config/nixpkgs/home.nix";
+      home="nvim .config/nixpkgs/home.nix";
     };
-  };
-  lf = {
-    enable = true;
-    settings = { 
-      drawbox = true;
-      color256 = true; 
-      dirfirst = true; 
-    };
-  };
-  git = {
-    enable = true;
-    package = pkgs.gitMinimal;
-    userName = "soyandrew";
-    userEmail = "andrei.ataman@protonmail.com";
-  };
-  neovim = {
-    enable = true;
-    viAlias = true;
-    package = pkgs.neovim-unwrapped;
-    plugins = with pkgs.vimPlugins; [ 
-      YouCompleteMe
-      polyglot 
-      indentLine
-      airline 
-      gruvbox ];
-    extraConfig = ''
-        set nu
-        syntax on
-        set nocompatible
-        set smartindent
-        set noswapfile
-        colorscheme gruvbox
-        set shiftwidth=2
-        set tabstop=2 softtabstop=2 '';
-  };
+	};
 };
 news.display = "silent";
-xdg.configFile."spectrwm/spectrwm.conf".source = "/home/neo/voidrice/Conf/spectrwm/spectrwm.conf";
+xdg.configFile."spectrwm/spectrwm.conf".source = "/home/andrew/voidrice/Conf/spectrwm/spectrwm.conf";
 }
+
