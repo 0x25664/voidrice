@@ -27,7 +27,8 @@ cpu() {
 pkgs() {
   pkgsUsr="$(nix-store -q --requisites ~/.nix-profile | wc -l)" 
   pkgsSys="$(nix-store -q --requisites "/run/current-system/sw/" | wc -l)"
-  echo -e "$pkgsSys $pkgsUsr"
+  pkgsTot=$((pkgsUsr + pkgsSys))
+  echo -e "$pkgsTot"
 }
 
 ### DATE ###
