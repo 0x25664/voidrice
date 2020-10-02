@@ -3,7 +3,7 @@
 battery() {
     batt="$(cat /sys/class/power_supply/BAT0/capacity)"
     stat="$(cat /sys/class/power_supply/BAT0/status)"
-    echo -e "$stat $batt%"
+    echo -e "$batt%"
 }
 
 ## RAM ###
@@ -25,7 +25,7 @@ cpu() {
 
 ### PKGS ###
 pkgs() {
-  pkgsUsr="$(nix-store -q --requisites ~/.nix-profile | wc -l)" 
+  pkgsUsr="$(nix-store -q --requisites ~/.nix-profile | wc -l)"
   pkgsSys="$(nix-store -q --requisites "/run/current-system/sw/" | wc -l)"
   pkgsTot=$((pkgsUsr + pkgsSys))
   echo -e "$pkgsTot"
@@ -38,6 +38,6 @@ date_custom() {
 }
 SLEEP_SEC=1
 while :; do
-  echo " [$(uname -r)] ($(pkgs)) [$(mem) $(cpu)] ($(battery))"
+  echo " [$(pkgs)] ($(mem) $(cpu)) [$(battery)]"
 	  sleep $SLEEP_SEC
 done
