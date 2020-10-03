@@ -28,7 +28,7 @@ programs = {
 	neovim = {
 		enable = true;
 		viAlias = true;
-		plugins = with pkgs.vimPlugins; [ polyglot gruvbox airline ];
+		plugins = with pkgs.vimPlugins; [ polyglot gruvbox airline vim-startify ];
 		extraConfig = ''
 				set nu
 				set list
@@ -50,7 +50,14 @@ programs = {
 				colorscheme gruvbox
 				let g:airline#extensions#tabline#enabled = 1
 				let g:airline#extensions#tabline#formatter = 'unique_tail'
-				let g:airline_powerline_fonts = 1 '';
+				let g:airline_powerline_fonts = 1
+				let g:startify_custom_header = [
+\ '			_		__				 _		___					',
+\ '		 / | / /__	____| |  / (_)___ ___	',
+\ '		/  |/ / _ \/ __ \ | / / / __ `__ \',
+\ '	 / /|  /	__/ /_/ / |/ / / / / / / /',
+\ '	/_/ |_/\___/\____/|___/_/_/ /_/ /_/	',
+\] '';
 	};
 	fish = {
 		enable = true;
