@@ -1,6 +1,6 @@
 { config, pkgs, ... } : {
 
-home.packages = with pkgs; [ hsetroot st gcc dmenu ];
+home.packages = with pkgs; [ sxiv hsetroot unclutter st gcc dmenu ];
 
 nixpkgs.config = {
 	st.patches = [ /home/andrew/voidrice/Conf/diffs/st-x.diff ];
