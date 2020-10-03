@@ -1,10 +1,11 @@
 { config, pkgs, ... } : {
 
-home.packages = with pkgs; [ st gcc pfetch dmenu ];
+home.packages = with pkgs; [ nitrogen st gcc pfetch dmenu ];
 
 nixpkgs.config = {
 	st.patches = [ /home/andrew/voidrice/Conf/st/st-x.diff ];
 };
+
 programs = {
 	chromium = {
 		enable = true;
@@ -32,13 +33,16 @@ programs = {
 				set nu
 				set list
 				syntax on
-				:map Q <nop>
+				map Q <nop>
+				inoremap jk <ESC>
+				inoremap kj <ESC>
+				filetype plugin on
 				set nocompatible
 				set smartindent
 				set noswapfile
 				set noshowmode
 				set shiftwidth=2
-				set tabstop=2
+				set tabstop=2 softtabstop=2
 				autocmd BufWritePost * set noet|retab!
 				autocmd BufWritePost Xresources !xrdb %
 				autocmd BufWritePost * %s/\s\+$//e
