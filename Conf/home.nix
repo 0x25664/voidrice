@@ -3,7 +3,7 @@
 home.packages = with pkgs; [ hsetroot st gcc dmenu ];
 
 nixpkgs.config = {
-	st.patches = [ /home/andrew/voidrice/Conf/st/st-x.diff ];
+	st.patches = [ /home/andrew/voidrice/Conf/diffs/st-x.diff ];
 };
 
 programs = {
