@@ -1,6 +1,6 @@
 { config, pkgs, ... } : {
 
-home.packages = with pkgs; [ nitrogen st gcc pfetch dmenu ];
+home.packages = with pkgs; [ hsetroot st gcc dmenu ];
 
 nixpkgs.config = {
 	st.patches = [ /home/andrew/voidrice/Conf/st/st-x.diff ];
