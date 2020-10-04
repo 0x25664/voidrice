@@ -1,11 +1,4 @@
-{ config, pkgs, ... } : {
-
-home.packages = with pkgs; [ sxiv hsetroot unclutter st gcc dmenu ];
-
-nixpkgs.config = {
-	st.patches = [ /home/andrew/voidrice/Conf/diffs/st-x.diff ];
-};
-
+{ config, pkgs, ... }:{
 programs = {
 	chromium = {
 		enable = true;
@@ -28,36 +21,8 @@ programs = {
 	neovim = {
 		enable = true;
 		viAlias = true;
-		plugins = with pkgs.vimPlugins; [ polyglot gruvbox airline vim-startify ];
-		extraConfig = ''
-				set nu
-				set list
-				syntax on
-				map Q <nop>
-				inoremap jk <ESC>
-				inoremap kj <ESC>
-				filetype plugin on
-				set nocompatible
-				set smartindent
-				set noswapfile
-				set noshowmode
-				set shiftwidth=2
-				set tabstop=2 softtabstop=2
-				autocmd BufWritePost * set noet|retab!
-				autocmd BufWritePost Xresources !xrdb %
-				autocmd BufWritePost * %s/\s\+$//e
-				let g:gruvbox_contrast_dark = 'hard'
-				colorscheme gruvbox
-				let g:airline#extensions#tabline#enabled = 1
-				let g:airline#extensions#tabline#formatter = 'unique_tail'
-				let g:airline_powerline_fonts = 1
-				let g:startify_custom_header = [
-\ '			_		__				 _		___					',
-\ '		 / | / /__	____| |  / (_)___ ___	',
-\ '		/  |/ / _ \/ __ \ | / / / __ `__ \',
-\ '	 / /|  /	__/ /_/ / |/ / / / / / / /',
-\ '	/_/ |_/\___/\____/|___/_/_/ /_/ /_/	',
-\] '';
+		plugins = with pkgs.vimPlugins; [ polyglot gruvbox airline fzf-vim vim-startify ];
+		extraConfig = '' source /home/andrew/voidrice/Conf/init.vim '';
 	};
 	fish = {
 		enable = true;
@@ -72,5 +37,6 @@ programs = {
 		};
 	};
 };
-news.display = "silent";
+home.packages = with pkgs; [ fzf sxiv hsetroot unclutter st dmenu ];
+nixpkgs.config.st.patches = [ /home/andrew/voidrice/Conf/diffs/st-x.diff ];
 xdg.configFile."spectrwm/spectrwm.conf".source = "/home/andrew/voidrice/Conf/spectrwm/spectrwm.conf"; }
