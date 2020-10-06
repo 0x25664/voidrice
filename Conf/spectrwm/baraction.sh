@@ -36,8 +36,7 @@ date_custom() {
 	datecustom="$(date '+%a %d %b %r')"
 	echo -e "$datecustom"
 }
-SLEEP_SEC=1
 while :; do
 	echo " [$(pkgs)] ($(mem) $(cpu) $(battery))"
-		sleep $SLEEP_SEC
+		sleep 1
 done
