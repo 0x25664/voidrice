@@ -22,26 +22,27 @@ programs = {
 		enable = true;
 		viAlias = true;
 		plugins = with pkgs.vimPlugins; [
+			YouCompleteMe
 			polyglot
 			gruvbox
 			airline
 			fzf-vim
 			vim-startify ];
-		extraConfig = ''source /home/andrew/voidrice/Conf/init.vim'';
+		extraConfig = ''source /home/andrew/voidrice/.config/init.vim'';
 	};
 	fish = {
 		enable = true;
-		interactiveShellInit = "source ~/voidrice/Conf/abbr.fish";
+		interactiveShellInit = "source ~/voidrice/.config/abbr.fish";
 	};
 };
-home.packages = with pkgs; [gcc fzf sxiv unclutter st dmenu];
+home.packages = with pkgs; [hsetroot gcc fzf sxiv unclutter st dmenu];
 nixpkgs = {
 	overlays = [(self: super: { dmenu = super.dmenu.override {
 	patches = [
-		/home/andrew/voidrice/Conf/diffs/dmenu-cen.diff
-		/home/andrew/voidrice/Conf/diffs/dmenu-border.diff];};})];
-	config.st.patches = [/home/andrew/voidrice/Conf/diffs/st-x.diff];
+		/home/andrew/voidrice/.config/diffs/dmenu-cen.diff
+		/home/andrew/voidrice/.config/diffs/dmenu-border.diff];};})];
+	config.st.patches = [/home/andrew/voidrice/.config/diffs/st-x.diff];
 };
 xdg.configFile."spectrwm/spectrwm.conf".source =
-	''/home/andrew/voidrice/Conf/spectrwm/spectrwm.conf'';
+	''/home/andrew/voidrice/.config/spectrwm/spectrwm.conf'';
 }
