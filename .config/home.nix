@@ -28,7 +28,7 @@ programs = {
 			airline
 			fzf-vim
 			vim-startify ];
-		extraConfig = ''source /home/andrew/voidrice/.config/init.vim'';
+		extraConfig = ''source ~/voidrice/.config/init.vim'';
 	};
 	fish = {
 		enable = true;

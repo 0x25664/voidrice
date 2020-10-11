@@ -1,0 +1,40 @@
+st.borderpx:0
+st.termname:st-256color
+!st.font:mononoki:pixelsize=14:weight=regular:antialias=true
+st.font:iosevka-term:pixelsize=14:weight=regular:antialias=true
+! special
+st.foreground:#c5c8c6
+st.background:#c5c8c6
+st.cursorColor:#c5c8c6
+
+! black
+st.color0:#1d1f21
+st.color8:#969896
+
+! red
+st.color1:#cc342b
+st.color9:#cc342b
+
+! green
+st.color2:#198844
+st.color10:#198844
+
+! yellow
+st.color3:#fba922
+st.color11:#fba922
+
+! blue
+st.color4:#3971ed
+st.color12:#3971ed
+
+! magenta
+st.color5:#a36ac7
+st.color13:#a36ac7
+
+! cyan
+st.color6:#3971ed
+st.color14:#3971ed
+
+! white
+st.color7:#c5c8c6
+st.color15:#ffffff

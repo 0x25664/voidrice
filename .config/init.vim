@@ -21,7 +21,6 @@ autocmd BufWritePost * set noet|retab!
 autocmd BufWritePost Xresources !xrdb %
 autocmd BufWritePost * %s/\s\+$//e
 " Colorscheme
-set t_Co=256
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 " Status Line
