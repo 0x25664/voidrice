@@ -1,11 +1,8 @@
-st.borderpx:0
-st.termname:st-256color
-!st.font:mononoki:pixelsize=14:weight=regular:antialias=true
-st.font:iosevka-term:pixelsize=14:weight=regular:antialias=true
 ! special
-st.foreground:#c5c8c6
+st.termname:st-256color
+st.font:mononoki:pixelsize=18:weight=regular:autohint=true
+st.borderpx:0
 st.background:#c5c8c6
-st.cursorColor:#c5c8c6
 
 ! black
 st.color0:#1d1f21

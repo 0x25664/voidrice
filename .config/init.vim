@@ -1,6 +1,5 @@
 " Editor stuff
 set nu
-set list
 set cursorline
 syntax enable
 set nocompatible
@@ -13,8 +12,7 @@ set clipboard=unnamedplus
 " KB mappings
 let mapleader = " "
 map Q <nop>
-inoremap jk <ESC>
-inoremap kj <ESC>
+inoremap jj <ESC>
 nnoremap <Leader>f :Files<CR>
 " Run on exit
 autocmd BufWritePost * set noet|retab!

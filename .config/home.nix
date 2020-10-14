@@ -15,7 +15,7 @@ programs = {
 	git = {
 		enable = true;
 		package = pkgs.gitMinimal;
-		userName = "0x25664";
+		userName = "andrew2jz";
 		userEmail = "andrei.ataman@protonmail.com";
 	};
 	neovim = {
@@ -26,16 +26,16 @@ programs = {
 			polyglot
 			gruvbox
 			airline
-			fzf-vim
 			vim-startify ];
-		extraConfig = ''source ~/voidrice/.config/init.vim'';
+		extraConfig = ''source /home/andrew/voidrice/.config/init.vim'';
 	};
 	fish = {
 		enable = true;
 		interactiveShellInit = "source ~/voidrice/.config/abbr.fish";
 	};
 };
-home.packages = with pkgs; [hsetroot gcc fzf sxiv unclutter st dmenu];
+
+home.packages = with pkgs; [hsetroot sxiv unclutter st dmenu];
 nixpkgs = {
 	overlays = [(self: super: { dmenu = super.dmenu.override {
 	patches = [
