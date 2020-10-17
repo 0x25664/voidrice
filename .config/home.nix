@@ -20,14 +20,12 @@ programs = {
 	};
 	neovim = {
 		enable = true;
-		viAlias = true;
 		plugins = with pkgs.vimPlugins; [
-			YouCompleteMe
 			polyglot
 			gruvbox
 			airline
 			vim-startify ];
-		extraConfig = ''source /home/andrew/voidrice/.config/init.vim'';
+		extraConfig = ''source /home/andrewSP/voidrice/.config/init.vim'';
 	};
 	fish = {
 		enable = true;
@@ -35,14 +33,25 @@ programs = {
 	};
 };
 
-home.packages = with pkgs; [hsetroot sxiv unclutter st dmenu];
+home = {
+	packages = with pkgs; [
+		st
+		sxiv
+		dmenu
+		gotop
+		hsetroot
+		neofetch
+		unclutter
+		yaru-theme
+		breeze-gtk
+		lxappearance ];
+};
 nixpkgs = {
 	overlays = [(self: super: { dmenu = super.dmenu.override {
 	patches = [
-		/home/andrew/voidrice/.config/diffs/dmenu-cen.diff
-		/home/andrew/voidrice/.config/diffs/dmenu-border.diff];};})];
-	config.st.patches = [/home/andrew/voidrice/.config/diffs/st-x.diff];
+		/home/andrewSP/voidrice/.config/diffs/dmenu-cen.diff
+		/home/andrewSP/voidrice/.config/diffs/dmenu-border.diff];};})];
+	config.st.patches = [/home/andrewSP/voidrice/.config/diffs/st-x.diff];
 };
 xdg.configFile."spectrwm/spectrwm.conf".source =
-	''/home/andrew/voidrice/.config/spectrwm/spectrwm.conf'';
-}
+	''/home/andrewSP/voidrice/.config/spectrwm/spectrwm.conf'';}
