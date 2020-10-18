@@ -13,19 +13,19 @@ set clipboard=unnamedplus
 let mapleader = " "
 map Q <nop>
 inoremap jj <ESC>
-"nnoremap <Leader>f :Files<CR>
 " Run on exit
 autocmd BufWritePost * set noet|retab!
 autocmd BufWritePost Xresources !xrdb %
 autocmd BufWritePost * %s/\s\+$//e
 " Colorscheme
-let g:gruvbox_italic = 1
-let g:gruvbox_italicize_comments = 1
-"let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_contrast_light = 'hard'
-set background="light"
+let base16colorspace=256  
+set t_Co=256
+set t_AB=^[[48;5;%dm
+set t_AF=^[[38;5;%dm
+set termguicolors
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
-" Status Line
+" Statusbar
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -46,5 +46,5 @@ let g:startify_lists = [
 	  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']			 },
 	  \ ]
 let g:startify_custom_header = [
-	\ '	Emacs - An extensible, customizable, free/libre text editor — and more.',
+	\ '	GNU Emacs, An extensible, customizable, free/libre text editor -- and more.',
 	\]

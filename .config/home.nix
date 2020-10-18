@@ -24,7 +24,8 @@ programs = {
 			polyglot
 			gruvbox
 			airline
-			vim-startify ];
+			vim-startify 
+			base16-vim ];
 		extraConfig = ''source /home/andrewSP/voidrice/.config/init.vim'';
 	};
 	fish = {
@@ -32,7 +33,6 @@ programs = {
 		interactiveShellInit = "source ~/voidrice/.config/abbr.fish";
 	};
 };
-
 home = {
 	packages = with pkgs; [
 		st
