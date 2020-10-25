@@ -1,4 +1,4 @@
-# `0x25664s voidrice`
+# `Andrews voidrice`
 `My Configs and my Projetcs`
 
-***If you find this repo, get lost***
+***If you find this repo, kudos to you***
