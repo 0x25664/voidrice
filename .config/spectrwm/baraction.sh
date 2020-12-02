@@ -37,6 +37,6 @@ date_custom() {
 	echo -e "$datecustom"
 }
 while :; do
-	echo " [$(pkgs)] ($(mem) $(cpu) $(battery))"
+	echo " ($(mem) $(cpu) $(battery))"
 		sleep 1
 done

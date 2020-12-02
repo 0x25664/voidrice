@@ -18,12 +18,8 @@ autocmd BufWritePost * set noet|retab!
 autocmd BufWritePost Xresources !xrdb %
 autocmd BufWritePost * %s/\s\+$//e
 " Colorscheme
-let base16colorspace=256  
-set t_Co=256
-set t_AB=^[[48;5;%dm
-set t_AF=^[[38;5;%dm
-set termguicolors
 let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_light = 'hard'
 colorscheme gruvbox
 " Statusbar
 let g:airline_powerline_fonts = 1
