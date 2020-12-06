@@ -6,6 +6,7 @@ home.packages = with pkgs; [
 	gotop
 	hsetroot
 	unclutter
+	arc-theme
 	breeze-gtk
 	lxappearance];
 programs = {
@@ -32,10 +33,11 @@ programs = {
 		plugins = with pkgs.vimPlugins; [
 			polyglot
 			gruvbox
-      airline 
-      vim-startify
-      vim-colorschemes];
-		extraConfig = ''source /home/andrew/voidrice/.config/init.vim'';
+			airline
+			vim-startify
+			vim-airline-themes
+			YouCompleteMe];
+		extraConfig = "source /home/andrew/voidrice/.config/init.vim";
 	};
 	fish = {
 		enable = true;
@@ -50,4 +52,4 @@ nixpkgs = {
 	config.st.patches = [/home/andrew/voidrice/.config/diffs/st-x.diff];
 };
 xdg.configFile."spectrwm/spectrwm.conf".source =
-	''/home/andrew/voidrice/.config/spectrwm/spectrwm.conf'';}
+	"/home/andrew/voidrice/.config/spectrwm/spectrwm.conf";}
