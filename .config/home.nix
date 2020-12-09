@@ -5,6 +5,7 @@ home.packages = with pkgs; [
 	dmenu
 	gotop
 	hsetroot
+	neofetch
 	unclutter
 	arc-theme
 	breeze-gtk
@@ -25,7 +26,7 @@ programs = {
 	git = {
 		enable = true;
 		package = pkgs.gitMinimal;
-		userName = "andrew2jz";
+		userName = "andrewSP2jz";
 		userEmail = "andrei.ataman@protonmail.com";
 	};
 	neovim = {
@@ -37,7 +38,7 @@ programs = {
 			vim-startify
 			vim-airline-themes
 			YouCompleteMe];
-		extraConfig = "source /home/andrew/voidrice/.config/init.vim";
+		extraConfig = "source /home/andrewSP/voidrice/.config/init.vim";
 	};
 	fish = {
 		enable = true;
@@ -47,9 +48,9 @@ programs = {
 nixpkgs = {
 	overlays = [(self: super: { dmenu = super.dmenu.override {
 	patches = [
-		/home/andrew/voidrice/.config/diffs/dmenu-cen.diff
-		/home/andrew/voidrice/.config/diffs/dmenu-border.diff];};})];
-	config.st.patches = [/home/andrew/voidrice/.config/diffs/st-x.diff];
+		/home/andrewSP/voidrice/.config/diffs/dmenu-cen.diff
+		/home/andrewSP/voidrice/.config/diffs/dmenu-border.diff];};})];
+	config.st.patches = [/home/andrewSP/voidrice/.config/diffs/st-x.diff];
 };
 xdg.configFile."spectrwm/spectrwm.conf".source =
-	"/home/andrew/voidrice/.config/spectrwm/spectrwm.conf";}
+	"/home/andrewSP/voidrice/.config/spectrwm/spectrwm.conf";}
