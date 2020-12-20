@@ -1,7 +1,6 @@
 ! special
 st.termname:st-256color
-!st.font:mononoki:size=11:autohint=true:autoalias=true
-st.font:jetbrains mono:size=11.5:autohint=true:autoalias=true
+st.font:mononoki:pixelsize=14:autohint=false:autoalias=true:weight=medium
 st.borderpx:0
 st.background:#c5c8c6
 ! special

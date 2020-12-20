@@ -1,4 +1,3 @@
-source /home/andrewSP/voidrice/.config/color.vim
 " Editor stuff
 set nu
 set cursorline
@@ -19,12 +18,13 @@ autocmd BufWritePost * set noet|retab!
 autocmd BufWritePost Xresources !xrdb %
 autocmd BufWritePost * %s/\s\+$//e
 " Colorscheme
-set termguicolors
+colorscheme gruvbox
+" set termguicolors
 set t_Co=256
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'hard'
 " Statusbar
-let g:airline_theme='onedark'
+let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'

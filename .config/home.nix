@@ -1,15 +1,9 @@
 { config, pkgs, ... }:{
 home.packages = with pkgs; [
-	st
-	sxiv
-	dmenu
-	gotop
-	hsetroot
-	neofetch
-	unclutter
-	arc-theme
-	breeze-gtk
-	lxappearance];
+	# Interface
+	hsetroot unclutter breeze-gtk lxappearance cinnamon.mint-themes
+	# Utility
+	sxiv gotop sxhkd st dmenu ];
 programs = {
 	chromium = {
 		enable = true;
@@ -32,12 +26,10 @@ programs = {
 	neovim = {
 		enable = true;
 		plugins = with pkgs.vimPlugins; [
-			polyglot
-			gruvbox
-			airline
-			vim-startify
-			vim-airline-themes
-			YouCompleteMe];
+			# Plugins
+			polyglot YouCompleteMe vim-startify
+			# Themes
+			gruvbox airline vim-airline-themes];
 		extraConfig = "source /home/andrewSP/voidrice/.config/init.vim";
 	};
 	fish = {
@@ -46,11 +38,10 @@ programs = {
 	};
 };
 nixpkgs = {
+	config.allowUnfree = true;
 	overlays = [(self: super: { dmenu = super.dmenu.override {
 	patches = [
 		/home/andrewSP/voidrice/.config/diffs/dmenu-cen.diff
 		/home/andrewSP/voidrice/.config/diffs/dmenu-border.diff];};})];
 	config.st.patches = [/home/andrewSP/voidrice/.config/diffs/st-x.diff];
-};
-xdg.configFile."spectrwm/spectrwm.conf".source =
-	"/home/andrewSP/voidrice/.config/spectrwm/spectrwm.conf";}
+};}

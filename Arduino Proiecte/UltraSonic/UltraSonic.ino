@@ -1,15 +1,3 @@
-/*
- * created by Rui Santos, https://randomnerdtutorials.com
- * 
- * Complete Guide for Ultrasonic Sensor HC-SR04
- *
-    Ultrasonic sensor Pins:
-        VCC: +5VDC
-        Trig : Trigger (INPUT) - Pin11
-        Echo: Echo (OUTPUT) - Pin 12
-        GND: GND
- */
- 
 int trigPin = 11;    // Trigger
 int echoPin = 12;    // Echo
 long duration, cm, inches;
