@@ -1,4 +1,3 @@
-# `Andrews voidrice`
-`My Configs and my Projetcs`
+# `NixOS Configs`
 
 ***If you find this repo, kudos to you***
