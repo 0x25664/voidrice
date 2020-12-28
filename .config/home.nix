@@ -3,7 +3,11 @@ home.packages = with pkgs; [
 	# Interface
 	hsetroot unclutter breeze-gtk lxappearance cinnamon.mint-themes
 	# Utility
-	sxiv gotop sxhkd st dmenu ];
+  sxiv gotop sxhkd st dmenu scrot
+  # Dev
+  blender arduino
+  # Misc
+  discord];
 programs = {
 	chromium = {
 		enable = true;
@@ -43,5 +47,4 @@ nixpkgs = {
 	patches = [
 		/home/andrewSP/voidrice/.config/diffs/dmenu-cen.diff
 		/home/andrewSP/voidrice/.config/diffs/dmenu-border.diff];};})];
-	config.st.patches = [/home/andrewSP/voidrice/.config/diffs/st-x.diff];
-};}
+	config.st.patches = [/home/andrewSP/voidrice/.config/diffs/st-x.diff]; };}

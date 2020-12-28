@@ -1,0 +1,6 @@
+berryc draw_text false
+berryc smart_place false
+berryc title_height 1
+berryc top_gap 10
+berryc resize_mask Mod3
+berryc inner_focus_color c5c8c6

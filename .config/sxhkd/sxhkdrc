@@ -1,0 +1,20 @@
+super + Return
+				st
+super + Return + shift
+				dmenu_run
+super + c
+				berryc window_center
+super + p
+				berryc window_close
+super + shift + q
+				berryc quit
+super + Tab
+				berryc cycle_focus
+super + {h,j,k,l}
+				berryc window_move {-20 0,0 20,0 -20,20 0}
+super + shift + {h,j,k,l}
+				berryc window_resize {-20 0,0 20,0 -20,20 0}
+super + m
+				berryc window_monocle
+Print
+				scrot
