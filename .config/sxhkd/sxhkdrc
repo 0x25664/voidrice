@@ -8,7 +8,7 @@ super + p
 				berryc window_close
 super + shift + q
 				berryc quit
-super + Tab
+alt + Tab
 				berryc cycle_focus
 super + {h,j,k,l}
 				berryc window_move {-20 0,0 20,0 -20,20 0}

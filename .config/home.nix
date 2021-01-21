@@ -3,9 +3,9 @@ home.packages = with pkgs; [
 	# Interface
 	hsetroot unclutter breeze-gtk cinnamon.mint-themes lxappearance
 	# Utility
-	sxiv gotop sxhkd st dmenu scrot
+	sxiv gotop sxhkd st dmenu scrot qbittorrent
 	# Dev
-	blender arduino python38 jetbrains.pycharm-community jetbrains.clion fish
+	blender arduino python38 jetbrains.pycharm-community jetbrains.idea-community openjdk
 	# Misc
 	discord viber];
 programs = {
