@@ -9,3 +9,5 @@ abbr --add --global -- xload 'xrdb ~/.config/Xresources'
 if [ (tty) = /dev/tty1 ]
 	startx
 end
+
+clear

@@ -1,13 +1,13 @@
 { config, pkgs, ... }:{
 home.packages = with pkgs; [
 	# Interface
-	hsetroot unclutter breeze-gtk lxappearance cinnamon.mint-themes
+	hsetroot unclutter breeze-gtk cinnamon.mint-themes lxappearance
 	# Utility
-  sxiv gotop sxhkd st dmenu scrot
-  # Dev
-  blender arduino
-  # Misc
-  discord];
+	sxiv gotop sxhkd st dmenu scrot
+	# Dev
+	blender arduino python38 jetbrains.pycharm-community jetbrains.clion fish
+	# Misc
+	discord viber];
 programs = {
 	chromium = {
 		enable = true;
@@ -24,7 +24,7 @@ programs = {
 	git = {
 		enable = true;
 		package = pkgs.gitMinimal;
-		userName = "andrewSP2jz";
+		userName = "godjiraX9";
 		userEmail = "andrei.ataman@protonmail.com";
 	};
 	neovim = {
@@ -37,7 +37,6 @@ programs = {
 		extraConfig = "source /home/andrewSP/voidrice/.config/init.vim";
 	};
 	fish = {
-		enable = true;
 		interactiveShellInit = "source ~/voidrice/.config/abbr.fish";
 	};
 };
