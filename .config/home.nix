@@ -5,7 +5,7 @@ home.packages = with pkgs; [
 	# Utility
 	sxiv gotop sxhkd st dmenu scrot qbittorrent
 	# Dev
-	blender arduino python38 jetbrains.pycharm-community jetbrains.idea-community openjdk
+	blender arduino jetbrains.idea-community openjdk emacs gcc 
 	# Misc
 	discord viber];
 programs = {

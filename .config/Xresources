@@ -1,6 +1,6 @@
 ! special
 st.termname:st-256color
-st.font:mononoki:pixelsize=14:autohint=false:autoalias=true:weight=medium
+st.font:terminessttf nerd font:pixelsize=18:autohint=true:autoalias=true
 st.borderpx:0
 st.background:#c5c8c6
 ! special
