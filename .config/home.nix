@@ -3,15 +3,15 @@ home.packages = with pkgs; [
 	# Interface
 	hsetroot unclutter breeze-gtk cinnamon.mint-themes lxappearance
 	# Utility
-	sxiv gotop sxhkd st dmenu scrot qbittorrent
+	sxiv sxhkd st dmenu scrot qbittorrent
 	# Dev
-	blender arduino jetbrains.idea-community openjdk emacs gcc 
+	arduino jetbrains.idea-community openjdk emacs gcc
 	# Misc
-	discord viber];
+	discord viber tdesktop ];
 programs = {
 	chromium = {
 		enable = true;
-		package = pkgs.brave;
+		package = pkgs.firefox;
 	};
 	lf = {
 		enable = true;
