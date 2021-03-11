@@ -1,10 +1,10 @@
 {config, pkgs, ... }:{
 	nixpkgs.config.allowUnfree = true;
-	nixpkgs.config.st.patches = [/home/andrewSP/vd/.config/diffs/st-x.diff];
+	nixpkgs.config.st.patches = [/home/andrewSP/Configs/.config/diffs/st-x.diff];
 	xdg.configFile = {
-		"tint2/tint2rc".source = "/home/andrewSP/vd/.config/tint2/tint2rc";
-		"sxhkd/sxhkdrc".source = "/home/andrewSP/vd/.config/sxhkd/sxhkdrc";
-		"berry/autostart".source = "/home/andrewSP/vd/.config/berry/autostart";
+		"tint2/tint2rc".source = "/home/andrewSP/Configs/.config/tint2/tint2rc";
+		"sxhkd/sxhkdrc".source = "/home/andrewSP/Configs/.config/sxhkd/sxhkdrc";
+		"berry/autostart".source = "/home/andrewSP/Configs/.config/berry/autostart";
 	};
 	home.packages = with pkgs; [
 		# Interface
@@ -24,7 +24,7 @@
 			withPython3 = true;
 			viAlias = true;
 			enable = true;
-			extraConfig = ''source ~/vd/.config/init.vim '';
+			extraConfig = ''source ~/Configs/.config/init.vim '';
 			plugins = with pkgs.vimPlugins; [
 			# Plugins
 			polyglot YouCompleteMe vim-startify
