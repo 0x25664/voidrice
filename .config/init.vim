@@ -6,9 +6,10 @@ set nocompatible
 set smartindent
 set noswapfile
 set noshowmode
-set shiftwidth=8
-set tabstop=8
+set shiftwidth=2
+set tabstop=2
 set clipboard=unnamedplus
+set laststatus=0
 " KB mappings
 let mapleader = " "
 map Q <nop>
@@ -18,16 +19,13 @@ autocmd BufWritePost * set noet|retab!
 autocmd BufWritePost Xresources !xrdb %
 autocmd BufWritePost * %s/\s\+$//e
 " Colorscheme
-colorscheme gruvbox
+colorscheme gruvbox 
 " set termguicolors
 set t_Co=256
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'hard'
-" Statusbar
-let g:airline_theme='gruvbox'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+" YCM
+set encoding=utf-8
 " Startup Screen
 let g:startify_session_autoload = 1
 let g:startify_session_delete_buffers = 1

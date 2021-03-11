@@ -1,41 +1,41 @@
 ! special
 st.termname:st-256color
-st.font:terminessttf nerd font:pixelsize=18:autohint=true:autoalias=true
+st.font:iosevka-term:pixelsize=14:autohint=true:autoalias=true
 st.borderpx:0
-st.background:#c5c8c6
+!
 ! special
-*.foreground:		#c5c8c6
-*.background:		#1d1f21
-*.cursorColor:	#c5c8c6
+*.foreground:   #ababab
+*.background:   #ababab
+*.cursorColor:  #ababab
 
 ! black
-*.color0:				#1d1f21
-*.color8:				#969896
+*.color0:       #000000
+*.color8:       #343434
 
 ! red
-*.color1:				#cc342b
-*.color9:				#cc342b
+*.color1:       #e92f2f
+*.color9:       #e92f2f
 
 ! green
-*.color2:				#198844
-*.color10:			#198844
+*.color2:       #0ed839
+*.color10:      #0ed839
 
 ! yellow
-*.color3:				#fba922
-*.color11:			#fba922
+*.color3:       #dddd13
+*.color11:      #dddd13
 
 ! blue
-*.color4:				#3971ed
-*.color12:			#3971ed
+*.color4:       #3b48e3
+*.color12:      #3b48e3
 
 ! magenta
-*.color5:				#a36ac7
-*.color13:			#a36ac7
+*.color5:       #f996e2
+*.color13:      #f996e2
 
 ! cyan
-*.color6:				#3971ed
-*.color14:			#3971ed
+*.color6:       #23edda
+*.color14:      #23edda
 
 ! white
-*.color7:				#c5c8c6
-*.color15:			#ffffff
+*.color7:       #ababab
+*.color15:      #f9f9f9

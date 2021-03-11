@@ -1,49 +1,47 @@
-{ config, pkgs, ... }:{
-home.packages = with pkgs; [
-	# Interface
-	hsetroot unclutter breeze-gtk cinnamon.mint-themes lxappearance
-	# Utility
-	sxiv sxhkd st dmenu scrot qbittorrent
-	# Dev
-	arduino jetbrains.idea-community openjdk emacs gcc
-	# Misc
-	discord viber tdesktop ];
-programs = {
-	chromium = {
-		enable = true;
-		package = pkgs.firefox;
+{config, pkgs, ... }:{
+	nixpkgs.config.allowUnfree = true;
+	nixpkgs.config.st.patches = [/home/andrewSP/vd/.config/diffs/st-x.diff];
+	xdg.configFile = {
+		"tint2/tint2rc".source = "/home/andrewSP/vd/.config/tint2/tint2rc";
+		"sxhkd/sxhkdrc".source = "/home/andrewSP/vd/.config/sxhkd/sxhkdrc";
+		"berry/autostart".source = "/home/andrewSP/vd/.config/berry/autostart";
 	};
-	lf = {
-		enable = true;
-		settings = {
-			drawbox = true;
-			color256 = true;
-			dirfirst = true;
-		};
-	};
-	git = {
-		enable = true;
-		package = pkgs.gitMinimal;
-		userName = "godjiraX9";
-		userEmail = "andrei.ataman@protonmail.com";
-	};
-	neovim = {
-		enable = true;
-		plugins = with pkgs.vimPlugins; [
+	home.packages = with pkgs; [
+		# Interface
+		hsetroot unclutter breeze-gtk cinnamon.mint-y-icons cinnamon.mint-themes lxappearance tint2
+		# Utility
+		sxiv sxhkd st rofi scrot flameshot
+		# Dev Compilers, Lang, Interpreters
+		jdk gcc deno nodejs python3Full python2Full editorconfig-core-c
+		# Dev Tools, IDEs, Editors
+		emacs any-nix-shell ripgrep fd
+		# Communication
+		discord viber tdesktop
+		# Internet
+		chromium qbittorrent];
+	programs = {
+		neovim = {
+			withPython3 = true;
+			viAlias = true;
+			enable = true;
+			extraConfig = ''source ~/vd/.config/init.vim '';
+			plugins = with pkgs.vimPlugins; [
 			# Plugins
 			polyglot YouCompleteMe vim-startify
 			# Themes
-			gruvbox airline vim-airline-themes];
-		extraConfig = "source /home/andrewSP/voidrice/.config/init.vim";
+			gruvbox ];
+		};
+		lf = {
+			enable = true;
+			settings = {
+				drawbox = true;
+				color256 = true;
+				dirfirst = true;
+			};
+		};
+		git = {
+			enable = true;
+			package = pkgs.gitFull;
+		};
 	};
-	fish = {
-		interactiveShellInit = "source ~/voidrice/.config/abbr.fish";
-	};
-};
-nixpkgs = {
-	config.allowUnfree = true;
-	overlays = [(self: super: { dmenu = super.dmenu.override {
-	patches = [
-		/home/andrewSP/voidrice/.config/diffs/dmenu-cen.diff
-		/home/andrewSP/voidrice/.config/diffs/dmenu-border.diff];};})];
-	config.st.patches = [/home/andrewSP/voidrice/.config/diffs/st-x.diff]; };}
+}

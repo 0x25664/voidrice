@@ -1,14 +1,14 @@
 super + Return
 				st
 super + Return + shift
-				dmenu_run
+				rofi -show drun
 super + c
 				berryc window_center
 super + p
 				berryc window_close
 super + shift + q
 				berryc quit
-alt + Tab
+super + Tab
 				berryc cycle_focus
 super + {h,j,k,l}
 				berryc window_move {-20 0,0 20,0 -20,20 0}
