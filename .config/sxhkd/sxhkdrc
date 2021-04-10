@@ -1,5 +1,5 @@
 super + Return
-				st
+				alacritty
 super + Return + shift
 				rofi -show drun
 super + c
