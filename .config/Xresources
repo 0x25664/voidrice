@@ -1,9 +1,10 @@
 st.termname:st-256color
-st.font:jetbrains mono:pixelsize=14:autohint=true:autoalias=true
+st.font:mononoki:pixelsize=18:autohint=true:autoalias=true
 st.borderpx:0
+
 ! special
 *.foreground:   #a6a28c
-! *.background:   #20201d
+*.background:   #c5c5c5
 *.cursorColor:  #a6a28c
 
 ! black
