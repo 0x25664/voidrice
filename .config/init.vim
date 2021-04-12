@@ -24,7 +24,7 @@ colorscheme gruvbox
 set t_Co=256
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'hard'
-" YCM
+" Encoding
 set encoding=utf-8
 " Startup Screen
 let g:startify_session_autoload = 1
